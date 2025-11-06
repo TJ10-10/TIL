@@ -1,1 +1,1 @@
-#TypeScript Greet
+#Go Greet
