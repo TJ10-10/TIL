@@ -1,1 +1,1 @@
-#Python Greet
+#TypeScript Greet
