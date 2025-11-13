@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>04 Responsive</title>
+    <link rel ="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">キノコ図鑑</h1>
+        <nav class="nav">
+          <a href="#">ホーム</a>
+          <a href="#">学習</a>
+          <a href="#">サンプル</a>
+          <a href="#">連絡</a>
+        </nav>
+        <button class="menu-toggle" aria-label="メニュー">=</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>森の中でも画面の中でも、心地よく。</h2>
+        <p>
+        端末サイズに合わせて、文字・余白・レイアウトが自然に変わるレスポンシブ設計の基本例です。
+        </p>
+        <a class="cta" href="#">はじめる</a>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>ナメコ</h3>
+          <p>湿った倒木の上に生える。食用で人気。</p>
+        </article>
+        <article class="card">
+          <h3>ベニテングダケ</h3>
+          <p>赤い傘が特徴。鑑賞のみ、食用不可。</p>
+        </article>
+        <article class="card">
+          <h3>シイタケ</h3>
+          <p>広葉樹の幹に生える。旨味が豊富。</p>
+        </article>
+        <article class="card">
+          <h3>マイタケ</h3>
+          <p>株状に発生。香りと食感が魅力。</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>&copy; 2025 Mushroom Library</small>
+      </div>
+    </footer>
+
+    <script>
+      // シンプルなモバイルメニュー切替
+      const btn = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav');
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
