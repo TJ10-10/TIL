@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>07 CSS Variables & Theme</title>
+  <style>
+    /* ベースとなるCSS変数 */
+    :root {
+      --bg: #fafafa;
+      --text: #222;
+      --primary: #3a86ff;
+      --card-bg: #ffffff;
+      --card-border: #e5e5e5;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ダークテーマ用の上書き */
+    .theme-dark {
+      --bg: #0f1115;
+      --text: #e6e6e6;
+      --primary: #7aa2f7;
+      --card-bg: #161a22;
+      --card-border: #242a33;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    /* リセット + レイアウト */
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 240ms ease, color 240ms ease;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* ヘッダー */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 120ms ease, box-shadow 200ms ease, border-color 200ms ease, background 200ms ease;
+    }
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+    .theme-toggle .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 20%, transparent);
+    }
+
+    /* カード */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+      transition: border-color 200ms ease, transform 140ms ease, box-shadow 200ms ease, background 200ms ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+    .card p {
+      margin: 0;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* 変数を使ったアクセント */
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--primary);
+      box-shadow: 0 6px 20px color-mix(in srgb, var(--primary) 35%, transparent);
+    }
+
+    /* フッター */
+    footer {
+      margin-top: 28px;
+      padding: 20px 0;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title">07: CSS Variables & Theme</div>
+      <button id="toggle" class="theme-toggle" aria-label="テーマ切り替え">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Toggle theme</span>
+      </button>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h3>変数で色を一元管理</h3>
+        <p>
+          :root に宣言した <code>--bg</code>, <code>--text</code>, <code>--primary</code> などを
+          どこでも再利用できます。テーマはクラスで上書きすれば即切り替え可能。
+        </p>
+        <p style="margin-top:10px;"><span class="badge">primary</span></p>
+      </div>
+
+      <div class="card">
+        <h3>ダークテーマの適用</h3>
+        <p>
+          <code>.theme-dark</code> を <code>body</code> に付けるだけで、変数が切り替わり全体の色・影・境界が変化します。
+          アニメーションの知識と組み合わせると、滑らかなトランジションにできます。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>保守性と拡張性</h3>
+        <p>
+          色や影を変えたいとき、1箇所の変数を変えるだけで全体に反映。コンポーネント設計と相性抜群です。
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      変数のスコープは継承されます。特定のセクションだけ色味を変えたいなら、親要素に変数を再定義して子に伝播させられます。
+      <br />
+      例: <code>.section { --primary: #ff6b6b; }</code>
+    </footer>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('theme-dark');
+    });
+  </script>
+</body>
+</html>
+
