@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banner Alert</title>
+<style>
+.banner {
+  background-color: #f44336;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.hidden {
+  display: none;
+}
+</style>
+</head>
+<body>
+  <div id="alertBanner" class="banner" role="alert" aria-live="assertive">
+    メンテナンス中です。しばらくお待ちください。
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('alertBanner').classList.add('hidden');
+    }, 5000);
+  </script>
+</body>
+</html>
