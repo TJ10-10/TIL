@@ -1,3 +1,7 @@
+DROP VIEW IF EXISTS edible_change_view;
+DROP TRIGGER IF EXISTS log_edible_change;
+DROP TABLE IF EXISTS mushroom_log;
+
 CREATE TABLE mushroom_log (
   log_id INTEGER PRIMARY KEY AUTOINCREMENT,
   mushroom_id INTEGER,
