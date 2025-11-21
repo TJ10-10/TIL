@@ -3,11 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Sticky Table of Contents</title>
+<style>
+body {
+  display: flex;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 1rem;
+  background: #f0f0f0;
+  border-right: 1px solid #ccc;
+}
+
+main {
+  padding: 2rem;
+  flex: 1;
+}
+
+section {
+  margin-bottom: 100vh;
+}
+
+h2 {
+  margin-top: 0;
+}
+</style>
   </head>
   <body>
-
-    <script src="script.js"</script>
+    <nav>
+      <h3>目次</h3>
+      <ul>
+        <li><a href="#section1">セクション1</a></li>
+        <li><a href="#section2">セクション2</a></li>
+        <li><a href="#section3">セクション3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="section1"><h2>セクション1</h2><p>内容...</section>
+      <section id="section2"><h2>セクション2</h2><p>内容...</section>
+      <section id="section3"><h2>セクション3</h2><p>内容...</section>
+    </main>
   </body>
 </html>
