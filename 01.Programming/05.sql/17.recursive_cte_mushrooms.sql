@@ -1,24 +1,27 @@
-CREATE TABLE folders (
+DROP TABLE IF EXISTS mushroom_taxonomy;
+
+CREATE TABLE mushroom_taxonomy (
   id INTEGER PRIMARY KEY,
-  name TEXT,
+  name TEXT NOT NULL,
   parent_id INTEGER
 );
 
-INSERT INTO folders (id, name, parent_id) VALUES
-(1, 'root', NULL),
-(2, 'home', 1),
-(3, 'user', 2),
-(4, 'document', 3),
-(5, 'photos', 3),
-(6, 'work', 4);
+INSERT INTO mushroom_taxonomy (id, name, parent_id) VALUES
+(1, '菌界', NULL),
+(2, '担子菌門', 1),
+(3, '真正担子菌網', 2),
+(4, 'ハラタケ目', 3),
+(5, 'ヌメリガサ科', 4),
+(6, 'ナメコ属', 5),
+(7, 'ナメコ', 6);
 
-WITH RECURSIVE folder_tree AS (
+WITH RECURSIVE taxonomy_path AS (
   SELECT id, name, parent_id, 0 AS depth
-  FROM folders
+  FROM mushroom_taxonomy
   WHERE parent_id IS NULL
   UNION ALL
-  SELECT f.id, f.name, f.parent_id, ft.depth + 1
-  FROM folders f
-  JOIN folder_tree ft ON f.parent_id = ft.id
+  SELECT t.id, t.name, t.parent_id, tp.depth + 1
+  FROM mushroom_taxonomy t
+  JOIN taxonomy_path tp ON t.parent_id = tp.id
 )
-SELECT * FROM　folder_tree ORDER BY depth;
+SELECT * FROM taxonomy_path ORDER BY depth;
