@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+.accordion-header {
+  background: #e0e0e0;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #fff;
+  transition: max-height 0.3s ease;
+  padding: 0 1rem;
+}
+
+.accordion-content.open {
+  max-height: 200px;
+  padding: 1rem;
+}
