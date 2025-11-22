@@ -1,0 +1,10 @@
+.hexagon {
+  width: 200px;
+  height: 100px;
+  background: #88cc88;
+  clip-path: polygon(
+  50% 0%, 100% 25%, 100% 75%,
+  50% 100%, 0% 75%, 0% 25%
+  );
+  margin: 2rem auto;
+}

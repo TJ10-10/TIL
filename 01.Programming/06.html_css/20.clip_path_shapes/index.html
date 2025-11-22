@@ -3,11 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Clip Path Shapes</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="hexagon"></div>
 
-    <script src="script.js"></script>
+<style>
+.hexagon {
+  width: 200px;
+  height: 100px;
+  background: #88cc88;
+  clip-path: polygon(
+    50% 0%, 100% 25%, 100% 75%,
+    50% 100%, 0% 75%, 0% 25%
+    );
+  margin: 2rem auto;
+}
+</style>
+
   </body>
 </html>
