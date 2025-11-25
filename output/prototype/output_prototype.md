@@ -8,6 +8,7 @@
 - [ ] Output Prototypeを書く -> Notion
 - [ ] Output Prototypeを書く -> Discord
 - [ ] Output Prototypeを書く -> Slack
+- [ ] 革新的エンタメプラットフォームについてNOTEに書く
 
 
 --------------------------------------------------------------------
@@ -39,3 +40,6 @@
 - [✅ ] 柿 履歴書 住所録 顔写真 -> Exel MVA(マクロ) のプロトタイプ作成
 - [✅ ] 柿 収穫個数リアルタイムでの表示　-> LINEのプロトタイプ作成
 - [✅] git commit -> output_prototype.md
+
+## 2025-11-26
+- [✅] 1.手書き -> 2.MD
