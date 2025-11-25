@@ -38,3 +38,4 @@
 - [✅] Output Prototypeの題名を書く -> Canva
 - [✅ ] 柿 履歴書 住所録 顔写真 -> Exel MVA(マクロ) のプロトタイプ作成
 - [✅ ] 柿 収穫個数リアルタイムでの表示　-> LINEのプロトタイプ作成
+- [✅] git commit -> output_prototype.md
