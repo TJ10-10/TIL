@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>カードホバー</title>
+<style>
+body {
+  font-family: sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+</style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>ナメコ</h2>
+      <p>湿った倒木の上に生える、ぬめりが特徴のキノコ。</p>
+    </div>
+  </body>
+</html>
