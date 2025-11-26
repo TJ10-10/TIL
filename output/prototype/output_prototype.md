@@ -45,3 +45,4 @@
 - [✅] values.md の作成。
 - [✅] lean_canvas.mdの作成。
 - [✅] persona.mdの作成。
+- [✅] user_journey.mdの作成。
