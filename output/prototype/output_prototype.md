@@ -46,3 +46,4 @@
 - [✅] lean_canvas.mdの作成。
 - [✅] persona.mdの作成。
 - [✅] user_journey.mdの作成。
+- [✅] narattive.mdの作成。
