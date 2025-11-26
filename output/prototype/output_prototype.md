@@ -44,3 +44,4 @@
 - [✅] 革新的なエンタメプラットフォーム構築についてNoteに書く。
 - [✅] values.md の作成。
 - [✅] lean_canvas.mdの作成。
+- [✅] persona.mdの作成。
