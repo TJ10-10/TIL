@@ -47,3 +47,11 @@
 - [✅] persona.mdの作成。
 - [✅] user_journey.mdの作成。
 - [✅] narattive.mdの作成。
+- [✅] architecture.mdの作成。
+- [✅] figma_ui_wire.mdの作成。
+- [✅] mvp_spce.mdの作成。
+- [✅] manifesto.mdの作成。
+
+## 2025-11-27
+- [✅] 1.手書き -> 2.MD
+- [✅] git commit -> output_prototype.md
