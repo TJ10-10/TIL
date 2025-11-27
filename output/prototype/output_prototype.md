@@ -55,3 +55,4 @@
 ## 2025-11-27
 - [✅] 1.手書き -> 2.MD
 - [✅] git commit -> output_prototype.md
+- [✅] demo/text_generation/text_gen.pyの作成。
