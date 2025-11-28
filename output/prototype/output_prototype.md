@@ -3,10 +3,6 @@
 ------------------------------------------------------------
 
 ## 未完了
-- [ ] Output Prototypeを書く -> Obsidian
-- [ ] Output Prototypeを書く -> Notion
-- [ ] Output Prototypeを書く -> Discord
-- [ ] Output Prototypeを書く -> Slack
 
 
 --------------------------------------------------------------------
@@ -61,3 +57,9 @@
 ## 2025-11-28
 - [✅] 1.手書き -> 2.MD
 - [✅] git commit -> output_prototype.md
+- [✅] Output Prototypeを書く -> Obsidian
+- [✅] Entame(Namida)を書く -> Obsidian
+- [✅] Output Prototypeを書く -> Notion
+- [✅] Entame(Namida)を書く -> Notion
+- [✅] Output Prototypeを書く -> Discord
+- [✅] Output Prototypeを書く -> Slack
