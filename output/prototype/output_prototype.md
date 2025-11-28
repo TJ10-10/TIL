@@ -56,3 +56,8 @@
 - [✅] 1.手書き -> 2.MD
 - [✅] git commit -> output_prototype.md
 - [✅] demo/text_generation/text_gen.pyの作成。
+- [✅] demo/text_generation/text_web.pyの作成。
+
+## 2025-11-28
+- [✅] 1.手書き -> 2.MD
+- [✅] git commit -> output_prototype.md
