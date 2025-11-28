@@ -63,3 +63,22 @@
 - [✅] Entame(Namida)を書く -> Notion
 - [✅] Output Prototypeを書く -> Discord
 - [✅] Output Prototypeを書く -> Slack
+- [✅] one_pane_ui/one_pane_ui.mdの作成。
+- [✅] one_pane_ui/figma_layout.mdの作成。
+- [✅] web/one_pane_ui/index.htmlの作成。
+- [✅] mobile/one_pane_ui/index.htmlの作成。
+- [✅] streamlit_one_pane.pyの作成。
+- [✅] next.js_tailwind_css_one_pane_ui/tailwind.config.jsの作成。
+- [✅] next.js_tailwind_css_one_pane_ui/app/global.cssの作成。
+- [✅] next.js_tailwind_css_one_pane_ui/app/page.tsxの作成。
+- [✅] next.js_tailwind_css_one_pane_ui/components/Sidebar.tsxの作成。
+- [✅] next.js_tailwind_css_one_pane_ui/components/Content.tsxの作成。
+- [✅] figma_next.js_tailwind_css_one_pane_ui/tailwind.config.jsの作成。
+- [✅] figma_next.js_tailwind_css_one_pane_ui/app/global.css
+- [✅] figma_next.js_tailwind_css_one_pane_ui/app/page.tsx
+- [✅] figma_next.js_tailwind_css_one_pane_ui/components/ui/ImageDropZone.tsx
+- [✅] figma_next.js_tailwind_css_one_pane_ui/components/ui/PerspectiveSelect.tsx
+- [✅] figma_next.js_tailwind_css_one_pane_ui/components/ui/TlkButton.tsx
+- [✅] figma_next.js_tailwind_css_one_pane_ui/components/ui/SpeechBubble.tsx
+- [✅] figma_next.js_tailwind_css_one_pane_ui/components/ui/Header.tsx
+- [✅] figma_next.js_tailwind_css_one_pane_ui/layout/OnePaneLayout.tsx
