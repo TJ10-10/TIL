@@ -82,3 +82,7 @@
 - [✅] figma_next.js_tailwind_css_one_pane_ui/components/ui/SpeechBubble.tsx
 - [✅] figma_next.js_tailwind_css_one_pane_ui/components/ui/Header.tsx
 - [✅] figma_next.js_tailwind_css_one_pane_ui/layout/OnePaneLayout.tsx
+
+## 2025-11-29
+- [✅] 1.手書き -> 2.MD
+- [✅] git commit -> output_prototype.md
