@@ -86,3 +86,8 @@
 ## 2025-11-29
 - [✅] 1.手書き -> 2.MD
 - [✅] git commit -> output_prototype.md
+
+
+## 2025-11-30
+- [✅] 1.手書き -> 2.MD
+- [✅] git commit -> output_prototype.md
