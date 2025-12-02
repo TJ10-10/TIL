@@ -1,24 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, ChangeEvent } from 'react';
 
 function App() {
+  const [tasks, setTasks] = useState<string[]>([]);
+  const [input, setInput] = useState<string>('');
+
+  const addTask = () => {
+    if (input.trim()) {
+      setTasks([...tasks, input]);
+      setInput('');
+    }
+  };
+
+  const removeTask = (index: number) => {
+    setTasks(tasks.filter((_, i) => i !== index));
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+    <h1>ToDo List</h1>
+    <input
+    value={input}
+    onChange={handleChange}
+    placeHolder="やることを入力"
+    style={{ padding: '0.5rem', marginRight: '0.5rem' }}
+    />
+    <button onClick={addTask}>追加</button>
+    <ul style={{ marginTop: '1rem' }}>
+    {tasks.map((task, i) => (
+      <li key={i} style={{ marginBottom: '0.5rem' }}>
+      {task}{' '}
+      <button onClick={() => removeTask(i)} style={{ marginLeft: '1rem' }}>
+      削除
+      </button>
+      </li>
+    ))}
+    </ul>
     </div>
   );
 }
