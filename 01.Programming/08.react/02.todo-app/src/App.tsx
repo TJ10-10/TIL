@@ -25,7 +25,7 @@ function App() {
     <input
     value={input}
     onChange={handleChange}
-    placeHolder="やることを入力"
+    placeholder="やることを入力"
     style={{ padding: '0.5rem', marginRight: '0.5rem' }}
     />
     <button onClick={addTask}>追加</button>
