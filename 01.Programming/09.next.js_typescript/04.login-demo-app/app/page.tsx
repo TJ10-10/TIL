@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from 'react';
-import { useRouter } from 'next\router';
+import { useRouter } from 'next/navigation';
 import { User } from '../types/user';
 
 const IndexPage = () => {
@@ -8,7 +10,7 @@ const IndexPage = () => {
   const router = useRouter();
 
   const handleLogin = () => {
-    if (user.username === 'adimin' && user.password === 'password') {
+    if (user.username === 'admin' && user.password === 'password') {
       router.push('/dashboard');
     } else {
       setError('ユーザー名またはパスワードが間違っています');
