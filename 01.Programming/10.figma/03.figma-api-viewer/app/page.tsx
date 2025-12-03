@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from 'react';
 import { fetchFigmaDocument } from '../lib/fetchFigma';
 import { FigmaNode } from '../types/figma';
