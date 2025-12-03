@@ -33,9 +33,10 @@ const App: React.FC = () => {
     />
     <button onClick={fetchWeather}>検索</button>
 
-    {error && <p style={{ color: 'red' }}>{error}</p>
+    {error && <p style={{ color: 'red' }}>{error}</p>}
       {weather && <WeatherDisplay data={weather} />}
       </div>
   );
-    };
+};
+
 export default App;
