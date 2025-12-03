@@ -23,7 +23,7 @@ export const ContactForm: React.FC = () => {
     type="text"
     name="name"
     placeholder="名前"
-    value="{formData.name}
+    value={formData.name}
     onChange={handleChange}
     />
     <br />
