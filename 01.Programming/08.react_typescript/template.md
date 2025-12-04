@@ -1,3 +1,4 @@
 ## React Tmplate のURL
 
-https://github.com/TJ10-10/react-template
+- Github で react-templateを Use template
+- Create repository を作成しそれをcloneする
