@@ -1,0 +1,2 @@
+Hello, C File I/O!
+This is step 09.
