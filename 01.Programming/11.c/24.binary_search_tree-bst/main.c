@@ -46,10 +46,7 @@ int main(void) {
   int n = sizeof(data) / sizeof(data[0]);
 
   for (int i = 0; i < n; i++) {
-    root = insert(root, i == 0 ? (root = insert(NULL, data[i]), root) : root, data[i]);
-    
-    if (i == 0) root = insert(NULL, data[i]);
-    else insert(root, data[i]);
+    root = insert(root, data[i]);
   }
 
   printf("二分探索木の中順走査 (ソート済み結果) : ");
